@@ -19,7 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "AndroidExpert1"
+rootProject.name = "AndroidExpert2"
 include(":app")
 include(":core")
 include(":favorite")

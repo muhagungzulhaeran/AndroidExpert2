@@ -10,7 +10,7 @@ plugins {
 apply (from = "../shared_dependencies.gradle")
 
 android {
-    namespace = "com.example.androidexpert1.core"
+    namespace = "com.example.androidexpert2.core"
     compileSdk = 34
 
     defaultConfig {

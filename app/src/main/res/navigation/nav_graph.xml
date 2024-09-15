@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/navigationHome"
-        android:name="com.example.androidexpert1.view.HomeFragment"
+        android:name="com.example.androidexpert2.view.HomeFragment"
         android:label="@string/titleHome"
         tools:layout="@layout/fragment_home">
         <action
@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/navigationFavorite"
-        android:name="com.example.androidexpert1.favorite.FavoriteFragment"
+        android:name="com.example.androidexpert2.favorite.FavoriteFragment"
         android:label="@string/titleFavorite"
         tools:layout="@layout/fragment_favorite">
         <action
@@ -30,13 +30,13 @@
 
     <fragment
         android:id="@+id/navigationSetting"
-        android:name="com.example.androidexpert1.view.SettingFragment"
+        android:name="com.example.androidexpert2.view.SettingFragment"
         android:label="@string/titleSetting"
         tools:layout="@layout/fragment_setting" />
 
     <activity
         android:id="@+id/detailActivity"
-        android:name="com.example.androidexpert1.view.DetailActivity"
+        android:name="com.example.androidexpert2.view.DetailActivity"
         android:label="activity_detail"
         tools:layout="@layout/activity_detail">
         <argument

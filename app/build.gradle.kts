@@ -11,11 +11,11 @@ apply (from = "../shared_dependencies.gradle")
 
 
 android {
-    namespace = "com.example.androidexpert1"
+    namespace = "com.example.androidexpert2"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.androidexpert1"
+        applicationId = "com.example.androidexpert2"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

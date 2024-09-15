@@ -13,7 +13,7 @@
         android:label="@string/appName"
         android:roundIcon="@drawable/logo_recipe"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidExpert1"
+        android:theme="@style/Theme.AndroidExpert2"
         tools:targetApi="31">
         <activity
             android:name=".view.MainActivity"
