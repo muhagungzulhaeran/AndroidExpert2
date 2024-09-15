@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        app:defaultValue="@string/prefDarkFollowSystem"
+        app:entries="@array/dark_mode"
+        app:entryValues="@array/darkModeValue"
+        app:key="@string/prefKeyDark"
+        app:title="@string/prefParkTitle"
+        app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>

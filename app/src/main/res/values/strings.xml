@@ -1,0 +1,28 @@
+<resources>
+    <string name="appName">Android Expert</string>
+    <string name="somethingWrong">Ooops.. something went wrong</string>
+    <string name="imageFood">Image Food</string>
+    <string name="backButton">Back Button</string>
+    <string name="favoriteButton">Favorite Button</string>
+    <string name="healthy">Healthy</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="glutenFree">Gluten Free</string>
+    <string name="vegan">Vegan</string>
+    <string name="cheap">Cheap</string>
+    <string name="checkIcon">Checked Icon</string>
+    <string name="dairyFree">Dairy Free</string>
+    <string name="titleHome">Home</string>
+    <string name="titleFavorite">Favorite</string>
+    <string name="titleSetting">Setting</string>
+
+    <!--    Mengatur dark mode preferences-->
+    <string name="prefKeyDark" translatable="false">key_dark_mode</string>
+    <string name="prefDarkFollowSystem" translatable="false">follow_system</string>
+    <string name="darkModeAuto">Automatic</string>
+    <string name="darkModeOn">Dark Mode</string>
+    <string name="darkModeOff">Light Mode</string>
+    <string name="prefParkOn" translatable="false">on</string>
+    <string name="prefDarkOff" translatable="false">off</string>
+    <string name="prefParkTitle">Dark mode</string>
+    <string name="logoRecipeOri">Logo Recipe Ori</string>
+</resources>

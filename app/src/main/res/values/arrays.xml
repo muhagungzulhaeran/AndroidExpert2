@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dark_mode">
+        <item>@string/darkModeOn</item>
+        <item>@string/darkModeOff</item>
+        <item>@string/darkModeAuto</item>
+    </string-array>
+    <string-array name="darkModeValue">
+        <item>@string/prefParkOn</item>
+        <item>@string/prefDarkOff</item>
+        <item>@string/prefDarkFollowSystem</item>
+    </string-array>
+</resources>

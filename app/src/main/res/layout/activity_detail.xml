@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.DetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clMainDetail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/viewError"
+            layout="@layout/view_error"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clDetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ProgressBar
+                android:id="@+id/progressBarDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tvDetailDescription"
+                />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:cardCornerRadius="12dp">
+
+                    <ImageView
+                        android:id="@+id/ivDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/imageFood"
+                        android:scaleType="centerCrop"
+                        tools:src="@tools:sample/avatars"  />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="12dp"
+                        android:clickable="true"
+                        android:contentDescription="@string/backButton"
+                        android:focusable="true"
+                        android:backgroundTint="@color/white"
+                        app:srcCompat="@drawable/ic_back" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fabFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_gravity="end"
+                        android:backgroundTint="@color/white"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="@string/favoriteButton"
+                        app:srcCompat="@drawable/ic_no_bookmark"
+                        />
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tvDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                style="@style/TextAppearance.AndroidExpert1.Body1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/frameLayout"
+                tools:text="Nasi Goreng Plus Dendeng Batokok" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetailTitle">
+
+                <ImageView
+                    android:id="@+id/ivDetailHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDetailHealthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/healthy"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailHealthy"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailHealthy"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailHealthy" />
+
+                <ImageView
+                    android:id="@+id/ivDetailVegetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailHealthy"
+                    app:layout_constraintTop_toBottomOf="@id/ivDetailHealthy"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDetailVegetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/vegetarian"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailVegetarian"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailVegetarian"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailVegetarian" />
+
+                <ImageView
+                    android:id="@+id/ivDetailVegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toEndOf="@+id/tvDetailHealthy"
+                    app:layout_constraintTop_toTopOf="@id/tvDetailHealthy"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDetailHealthy"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDetailVegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/vegan"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailVegan"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailVegan"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailVegan" />
+
+                <ImageView
+                    android:id="@+id/ivDetailCheap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailVegan"
+                    app:layout_constraintTop_toBottomOf="@id/ivDetailVegan"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDetailCheap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/cheap"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailCheap"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailCheap"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailCheap" />
+
+                <ImageView
+                    android:id="@+id/ivDetailDairyFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toEndOf="@+id/tvDetailVegan"
+                    app:layout_constraintTop_toTopOf="@id/tvDetailVegan"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDetailVegan"
+                    />
+
+                <TextView
+                    android:id="@+id/tvDetailDairyFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/dairyFree"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailDairyFree"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailDairyFree"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailDairyFree" />
+
+                <ImageView
+                    android:id="@+id/ivDetailGlutenFree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:contentDescription="@string/checkIcon"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintStart_toStartOf="@id/ivDetailDairyFree"
+                    app:layout_constraintTop_toBottomOf="@id/ivDetailDairyFree"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_detail_gluten_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/glutenFree"
+                    android:textColor="@color/green"
+                    app:layout_constraintStart_toEndOf="@id/ivDetailGlutenFree"
+                    app:layout_constraintTop_toTopOf="@id/ivDetailGlutenFree"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDetailGlutenFree" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/tvDetailDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                style="@style/TextAppearance.AndroidExpert1.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+                tools:text="Nasi goreng adalah salah satu makanan yang paling terkenal di Indonesia. Hidangan ini merupakan kuliner ikonik yang sangat populer di kalangan masyarakat Indonesia maupun wisatawan mancanegara. Artikel ini akan membahas tentang resep nasi goreng dengan berbagai variasi."
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
