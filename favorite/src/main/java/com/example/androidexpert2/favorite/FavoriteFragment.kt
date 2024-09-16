@@ -13,7 +13,8 @@ import com.example.androidexpert2.core.domain.model.Recipe
 import com.example.androidexpert2.core.ui.RecipeAdapter
 import com.example.androidexpert2.di.FavoriteModuleDependencies
 import com.example.androidexpert2.favorite.databinding.FragmentFavoriteBinding
-import com.example.androidexpert2.favorite.di.DaggerFavoriteComponentt
+import com.example.androidexpert2.favorite.di.DaggerFavoriteComponent
+import com.example.androidexpert2.favorite.di.FavoriteComponent
 import com.example.androidexpert2.favorite.viewmodel.FavoriteViewModel
 import com.example.androidexpert2.favorite.viewmodel.ViewModelFactory
 import dagger.hilt.android.EntryPointAccessors
@@ -29,22 +30,8 @@ class FavoriteFragment : Fragment() {
         factory
     }
 
-//    override fun onAttach(context: Context) {
-//        FavoriteComponentt.builder()
-//            .context(requireActivity())
-//            .appDependencies(
-//                EntryPointAccessors.fromApplication(
-//                    requireActivity().applicationContext,
-//                    FavoriteModuleDependencies::class.java
-//                )
-//            )
-//            .build()
-//            .inject(this)
-//        super.onAttach(context)
-//    }
-
     override fun onAttach(context: Context) {
-        DaggerFavoriteComponentt.builder()
+        DaggerFavoriteComponent.builder()
             .context(requireActivity())
             .appDependencies(
                 EntryPointAccessors.fromApplication(
